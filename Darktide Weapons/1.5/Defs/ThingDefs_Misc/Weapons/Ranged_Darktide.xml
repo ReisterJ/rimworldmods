@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+<ThingDef Name="Darktide_Gun" ParentName="BaseHumanMakeableGun" Abstract="True">
+  <weaponTags Inherit="false">
+    <!-- <li>Gun</li> -->
+  </weaponTags>
+  <tradeTags Inherit="false">
+    <!-- <li>WeaponRanged</li> -->
+  </tradeTags>
+
+</ThingDef>
+
+<!-- <ThingDef Name="Darktide_Bullet" Abstract="True" ParentName="Projectile">
+
+</ThingDef> -->
+
+ <!-- Infantry autogun bullet special:    critical hit  -->
+<ThingDef Name="DarktideWeapons.ThingDef_InfantryAutogunBullet" ParentName="BaseBullet">
+  <defName>Bullet_Columnus_MK5_Infantry_Autogun</defName>
+  <label>Darktide Columnus Mk V Infantry Autogun bullet</label>
+  <graphicData>
+    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <projectile>
+    <damageDef>Bullet</damageDef>
+    <damageAmountBase>7</damageAmountBase>
+    <armorPenetrationBase>0.18</armorPenetrationBase>
+    <speed>66</speed>
+    
+  </projectile>
+  <!-- <critChance>10</critChance> -->
+  <thingClass>DarktideWeapons.Projectile_IFAGBullet</thingClass>
+</ThingDef>
+
+
+<ThingDef ParentName="Darktide_Gun">
+  <defName>Gun_Darktide_Columnus_MK5_Infantry_Autogun</defName>
+  <label>Columnus Mk V Infantry Autogun</label>
+  <description>A rarity in the Moebian Domain, Columnus autoguns are prized for their high rate of fire, if somewhat deafening report.</description>
+  <graphicData>
+    <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <soundInteract>Interact_SMG</soundInteract>
+  <weaponClasses>
+
+  </weaponClasses>
+  <recipeMaker>
+    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>9</Crafting>
+    </skillRequirements>
+    <displayPriority>440</displayPriority>
+  </recipeMaker>
+  <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+  <statBases>
+    <WorkToMake>34000</WorkToMake>
+    <Mass>3.5</Mass>
+    <AccuracyTouch>0.98</AccuracyTouch>
+    <AccuracyShort>0.85</AccuracyShort>
+    <AccuracyMedium>0.60</AccuracyMedium>
+    <AccuracyLong>0.20</AccuracyLong>
+    <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+  </statBases>
+  <costList>
+    <Steel>75</Steel>
+    <Plasteel>100</Plasteel>
+    <ComponentIndustrial>8</ComponentIndustrial>
+  </costList>
+  <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Columnus_MK5_Infantry_Autogun</defaultProjectile>
+      <warmupTime>1.2</warmupTime>
+      <range>33.9</range>
+      <burstShotCount>9</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>Shot_HeavySMG</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+  </verbs>
+  <weaponTags>
+    
+  </weaponTags>
+  <tools>
+    <li>
+      <label>grip</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+    </li>
+    <li>
+      <label>barrel</label>
+      <capacities>
+        <li>Blunt</li>
+        <li>Poke</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+    </li>
+  </tools>
+</ThingDef>
+
+<ThingDef Name="Darktide_Revolver_Bullet" ParentName="BaseBullet">
+  <defName>Bullet_Darktide_Revolver</defName>
+  <label>Darktide Quickdraw Stub Revolver bullet</label>
+  <graphicData>
+    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <projectile>
+    <damageDef>Bullet</damageDef>
+    <damageAmountBase>36</damageAmountBase>
+    <stoppingPower>2</stoppingPower>
+    <armorPenetrationBase>0.50</armorPenetrationBase>
+    <speed>70</speed>
+  </projectile>
+</ThingDef>
+<ThingDef ParentName="Darktide_Gun">
+  <defName>Gun_Darktide_Revolver</defName>
+  <label>Quickdraw Stub Revolver</label>
+  <description>One of the most ancient pistol designs, stub revolvers endure across myriad frontier worlds thanks to their durability, simplicity and effectiveness.</description>
+  <possessionCount>1</possessionCount>
+  <graphicData>
+    <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <uiIconScale>1.4</uiIconScale>
+  <soundInteract>Interact_Revolver</soundInteract>
+  <statBases>
+    <WorkToMake>34000</WorkToMake>
+    <Mass>1.4</Mass>
+    <AccuracyTouch>0.95</AccuracyTouch>
+    <AccuracyShort>0.95</AccuracyShort>
+    <AccuracyMedium>0.88</AccuracyMedium>
+    <AccuracyLong>0.80</AccuracyLong>
+    <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+  </statBases>
+  <weaponTags>
+
+  </weaponTags>
+  <weaponClasses>
+    <!-- <li>RangedLight</li> -->
+  </weaponClasses>
+  <costList>
+    <Steel>30</Steel>
+    <!-- <Wood>50</Wood> -->
+    <Plasteel>80</Plasteel>
+    <ComponentIndustrial>8</ComponentIndustrial>
+  </costList>
+  <recipeMaker>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+    </skillRequirements>
+    <displayPriority>400</displayPriority>
+  </recipeMaker>
+  <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Darktide_Revolver</defaultProjectile>
+      <warmupTime>1.5</warmupTime>
+      <range>39.9</range>
+      <soundCast>Shot_Revolver</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+  </verbs>
+  <tools>
+    <li>
+      <label>grip</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+    </li>
+    <li>
+      <label>barrel</label>
+      <capacities>
+        <li>Blunt</li>
+        <li>Poke</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+    </li>
+  </tools>
+</ThingDef>
+
+<ThingDef Name="Darktide_Braced_Autogun_Bullet" ParentName="BaseBullet">
+  <defName>Bullet_Agripinaa_Mk8_Braced_Autogun</defName>
+  <label>Agripinaa Mk VIII Braced Autogun bullet</label>
+  <graphicData>
+    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <projectile>
+    <damageDef>Bullet</damageDef>
+    <damageAmountBase>15</damageAmountBase>
+    <armorPenetrationBase>0.25</armorPenetrationBase>
+    <stoppingPower>3</stoppingPower>
+    <speed>70</speed>
+  </projectile>
+</ThingDef>
+
+<ThingDef ParentName="Darktide_Gun">
+  <defName>Gun_Darktide_Agripinaa_Mk8_Braced_Autogun</defName>
+  <label>Agripinaa Mk VIII Braced Autogun</label>
+  <description>Exchanging the iron sights of the better known Agripinaa autogun for a heavy stock and counter-balanced barrel, this weapon is well-suited for mowing down hordes of foes.</description>
+  <graphicData>
+    <texPath>Things/Weapon/Ranged/Agripinaa_Mk8_Braced_Autogun</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+  <soundInteract>Interact_Rifle</soundInteract>
+  <weaponClasses>
+
+  </weaponClasses>
+  <recipeMaker>
+    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>9</Crafting>
+    </skillRequirements>
+    <displayPriority>440</displayPriority>
+  </recipeMaker>
+  <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+  <statBases>
+    <WorkToMake>40000</WorkToMake>
+    <Mass>4.5</Mass>
+    <AccuracyTouch>0.95</AccuracyTouch>
+    <AccuracyShort>0.80</AccuracyShort>
+    <AccuracyMedium>0.51</AccuracyMedium>
+    <AccuracyLong>0.10</AccuracyLong>
+    <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+  </statBases>
+  <costList>
+    <Steel>105</Steel>
+    <Plasteel>150</Plasteel>
+    <ComponentIndustrial>10</ComponentIndustrial>
+  </costList>
+  <verbs>
+    <li>
+      <verbClass>Verb_Shoot</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Agripinaa_Mk8_Braced_Autogun</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <range>31.9</range>
+      <burstShotCount>6</burstShotCount>
+      <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+      <soundCast>Shot_AssaultRifle</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </li>
+  </verbs>
+  <weaponTags>
+    
+  </weaponTags>
+  <tools>
+    <li>
+      <label>grip</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+    </li>
+    <li>
+      <label>barrel</label>
+      <capacities>
+        <li>Blunt</li>
+        <li>Poke</li>
+      </capacities>
+      <power>9</power>
+      <cooldownTime>2</cooldownTime>
+    </li>
+  </tools>
+</ThingDef>
+
+
+</Defs>

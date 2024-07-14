@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef Name="Darktide_MeleeWeapon" Abstract="True" ParentName="BaseWeapon">
+        <techLevel>Industrial</techLevel>
+        <smeltable>true</smeltable>
+        <burnableByRecipe>false</burnableByRecipe>
+        <thingCategories>
+          <li>WeaponsMelee</li>
+        </thingCategories>
+        <weaponClasses>
+          <li>Melee</li>
+        </weaponClasses>
+        <!-- <relicChance>1</relicChance> -->
+        <recipeMaker>
+          <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+          <workSkill>Crafting</workSkill>
+          <effectWorking>Smith</effectWorking>
+          <soundWorking>Recipe_Smith</soundWorking>
+          <recipeUsers>
+            <li>ElectricSmithy</li>
+            <li>FueledSmithy</li>
+          </recipeUsers>
+          <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+        </recipeMaker>
+        <inspectorTabs>
+          <li>ITab_Art</li>
+        </inspectorTabs>
+        <tradeTags>
+          <li>WeaponMelee</li>
+        </tradeTags>
+      </ThingDef>
+
+      <ThingDef Name="Darktide_MeleeWeapon_Quality" Abstract="True" ParentName="Darktide_MeleeWeapon">
+        <comps>
+          <li>
+            <compClass>CompQuality</compClass>
+          </li>
+          <li Class="CompProperties_Art">
+            <nameMaker>NamerArtWeaponMelee</nameMaker>
+            <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+            <minQualityForArtistic>Excellent</minQualityForArtistic>
+          </li>
+        </comps>
+      </ThingDef>
+
+
+    <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
+        <defName>Darktide_Meleeweapon_Catachan_Combat_Blade</defName>
+        <label>Catachan Combat Blade</label>
+        <techLevel>Medieval</techLevel>
+        <description>Catachan combat blade from Warhammer 40K: Darktide.</description>
+        <graphicData>
+          <texPath>Things/Item/Equipment/WeaponMelee/Knife</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.6</uiIconScale>
+        
+        <weaponClasses>
+          <!-- <li>Neolithic</li> -->
+        </weaponClasses>
+        <costStuffCount>30</costStuffCount>
+        <statBases>
+          <WorkToMake>18000</WorkToMake>
+          <Mass>0.5</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <stuffCategories>
+           
+        </stuffCategories>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tools>
+          <li>
+            <label>Light attack</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>8</power>
+            <cooldownTime>0.5</cooldownTime>
+            <armorPenetration>0.12</armorPenetration>
+          </li>
+          <li>
+            <label>Heavy attack</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>40</power>
+            <cooldownTime>2.2</cooldownTime>
+            <armorPenetration>0.6</armorPenetration>
+            <chanceFactor>0.2</chanceFactor>
+          </li>
+        </tools>
+        <equippedStatOffsets>
+          <MoveSpeed>0.4</MoveSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <Steel>30</Steel>
+            <Plasteel>80</Plasteel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <recipeMaker>
+            <skillRequirements>
+              <Crafting>9</Crafting>
+            </skillRequirements>
+            <displayPriority>400</displayPriority>
+          </recipeMaker>
+      </ThingDef>
+</Defs>
