@@ -17,7 +17,7 @@
 </ThingDef> -->
 
  <!-- Infantry autogun bullet special:    critical hit  -->
-<ThingDef Name="DarktideWeapons.ThingDef_InfantryAutogunBullet" ParentName="BaseBullet">
+<ThingDef Class="DarktideWeapons.ThingDef_InfantryAutogunBullet" ParentName="BaseBullet">
   <defName>Bullet_Columnus_MK5_Infantry_Autogun</defName>
   <label>Darktide Columnus Mk V Infantry Autogun bullet</label>
   <graphicData>
@@ -31,8 +31,10 @@
     <speed>66</speed>
     
   </projectile>
-  <!-- <critChance>10</critChance> -->
-  <thingClass>DarktideWeapons.Projectile_IFAGBullet</thingClass>
+  
+  <critChance>0.15</critChance>
+  <critMultiplier>2</critMultiplier>
+  <thingClass>DarktideWeapons.Bullet_IFAG</thingClass>
 </ThingDef>
 
 
@@ -194,7 +196,7 @@
   </tools>
 </ThingDef>
 
-<ThingDef Name="Darktide_Braced_Autogun_Bullet" ParentName="BaseBullet">
+<ThingDef Class="DarktideWeapons.ThingDef_BracedAutogunBullet" ParentName="BaseBullet">
   <defName>Bullet_Agripinaa_Mk8_Braced_Autogun</defName>
   <label>Agripinaa Mk VIII Braced Autogun bullet</label>
   <graphicData>
@@ -208,6 +210,9 @@
     <stoppingPower>3</stoppingPower>
     <speed>70</speed>
   </projectile>
+  <stunChance>0.25</stunChance>
+  <stunTicks>40</stunTicks>
+  <thingClass>DarktideWeapons.Bullet_BRAG</thingClass>
 </ThingDef>
 
 <ThingDef ParentName="Darktide_Gun">
@@ -237,7 +242,7 @@
     <AccuracyShort>0.80</AccuracyShort>
     <AccuracyMedium>0.51</AccuracyMedium>
     <AccuracyLong>0.10</AccuracyLong>
-    <RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+    <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
   </statBases>
   <costList>
     <Steel>105</Steel>
@@ -249,10 +254,10 @@
       <verbClass>Verb_Shoot</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
       <defaultProjectile>Bullet_Agripinaa_Mk8_Braced_Autogun</defaultProjectile>
-      <warmupTime>0.6</warmupTime>
+      <warmupTime>0.7</warmupTime>
       <range>31.9</range>
-      <burstShotCount>6</burstShotCount>
-      <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+      <burstShotCount>5</burstShotCount>
+      <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
       <soundCast>Shot_AssaultRifle</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
