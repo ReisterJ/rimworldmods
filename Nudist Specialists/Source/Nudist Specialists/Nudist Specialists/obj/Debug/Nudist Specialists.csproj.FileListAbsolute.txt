@@ -1,0 +1,6 @@
+E:\workstation\rimworld\my mod\Nudist Specialists\1.5\Assemblies\Nudist Specialists.dll
+E:\workstation\rimworld\my mod\Nudist Specialists\1.5\Assemblies\Nudist Specialists.pdb
+E:\workstation\rimworld\code\Nudist Specialists\Nudist Specialists\obj\Debug\Nudist Specialists.csproj.AssemblyReference.cache
+E:\workstation\rimworld\code\Nudist Specialists\Nudist Specialists\obj\Debug\Nudist Specialists.csproj.CoreCompileInputs.cache
+E:\workstation\rimworld\code\Nudist Specialists\Nudist Specialists\obj\Debug\Nudist Specialists.dll
+E:\workstation\rimworld\code\Nudist Specialists\Nudist Specialists\obj\Debug\Nudist Specialists.pdb
