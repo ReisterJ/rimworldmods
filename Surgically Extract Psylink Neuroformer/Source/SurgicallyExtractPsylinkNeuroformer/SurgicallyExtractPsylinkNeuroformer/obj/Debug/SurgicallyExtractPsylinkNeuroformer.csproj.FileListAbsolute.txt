@@ -1,0 +1,6 @@
+E:\workstation\rimworld\my mod\Surgically Extract Psylink Neuroformer\1.5\Assemblies\SurgicallyExtractPsylinkNeuroformer.dll
+E:\workstation\rimworld\my mod\Surgically Extract Psylink Neuroformer\1.5\Assemblies\SurgicallyExtractPsylinkNeuroformer.pdb
+E:\workstation\rimworld\code\Surgically Extract Psylink Neuroformer\SurgicallyExtractPsylinkNeuroformer\SurgicallyExtractPsylinkNeuroformer\obj\Debug\SurgicallyExtractPsylinkNeuroformer.csproj.AssemblyReference.cache
+E:\workstation\rimworld\code\Surgically Extract Psylink Neuroformer\SurgicallyExtractPsylinkNeuroformer\SurgicallyExtractPsylinkNeuroformer\obj\Debug\SurgicallyExtractPsylinkNeuroformer.csproj.CoreCompileInputs.cache
+E:\workstation\rimworld\code\Surgically Extract Psylink Neuroformer\SurgicallyExtractPsylinkNeuroformer\SurgicallyExtractPsylinkNeuroformer\obj\Debug\SurgicallyExtractPsylinkNeuroformer.dll
+E:\workstation\rimworld\code\Surgically Extract Psylink Neuroformer\SurgicallyExtractPsylinkNeuroformer\SurgicallyExtractPsylinkNeuroformer\obj\Debug\SurgicallyExtractPsylinkNeuroformer.pdb
