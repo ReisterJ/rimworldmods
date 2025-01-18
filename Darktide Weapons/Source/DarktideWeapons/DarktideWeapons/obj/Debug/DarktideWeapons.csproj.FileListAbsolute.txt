@@ -1,0 +1,15 @@
+E:\workstation\rimworld\code\DarktideWeapons\DarktideWeapons\bin\Debug\DarktideWeapons.dll
+E:\workstation\rimworld\code\DarktideWeapons\DarktideWeapons\bin\Debug\DarktideWeapons.pdb
+E:\workstation\rimworld\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.csproj.AssemblyReference.cache
+E:\workstation\rimworld\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.csproj.CoreCompileInputs.cache
+E:\workstation\rimworld\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.dll
+E:\workstation\rimworld\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.pdb
+E:\workstation\rimworld\my mod\Darktide Weapons\1.5\Assemblies\DarktideWeapons.dll
+E:\workstation\rimworld\my mod\Darktide Weapons\1.5\Assemblies\DarktideWeapons.pdb
+F:\WORK\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.csproj.AssemblyReference.cache
+F:\WORK\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.csproj.CoreCompileInputs.cache
+F:\WORK\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.dll
+F:\WORK\code\DarktideWeapons\DarktideWeapons\obj\Debug\DarktideWeapons.pdb
+F:\WORK\my mod\Darktide Weapons\1.5\Assemblies\DarktideWeapons.dll
+F:\WORK\my mod\Darktide Weapons\1.5\Assemblies\DarktideWeapons.pdb
+F:\WORK\code\DarktideWeapons\DarktideWeapons\obj\Debug\Darktide.2BE1294B.Up2Date
