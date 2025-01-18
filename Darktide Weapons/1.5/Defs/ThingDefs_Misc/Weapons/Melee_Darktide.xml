@@ -7,8 +7,8 @@
         <thingCategories>
           <li>WeaponsMelee</li>
         </thingCategories>
-        <weaponClasses>
-          <li>Melee</li>
+        <weaponClasses Inherit="False">
+
         </weaponClasses>
         <!-- <relicChance>1</relicChance> -->
         <recipeMaker>
@@ -16,6 +16,10 @@
           <workSkill>Crafting</workSkill>
           <effectWorking>Smith</effectWorking>
           <soundWorking>Recipe_Smith</soundWorking>
+          <skillRequirements>
+            <Crafting>9</Crafting>
+          </skillRequirements>
+          <displayPriority>400</displayPriority>
           <recipeUsers>
             <li>ElectricSmithy</li>
             <li>FueledSmithy</li>
@@ -25,48 +29,59 @@
         <inspectorTabs>
           <li>ITab_Art</li>
         </inspectorTabs>
-        <tradeTags>
-          <li>WeaponMelee</li>
+        <tradeTags Inherit="False">
+        
         </tradeTags>
+        <weaponTags Inherit="False">
+          <li>DarktideMelee</li>
+        </weaponTags>
+        <comps>
+          <li Class="CompProperties_Forbiddable"> </li>
+          
+        </comps>
       </ThingDef>
 
       <ThingDef Name="Darktide_MeleeWeapon_Quality" Abstract="True" ParentName="Darktide_MeleeWeapon">
+        <!-- shieldtick -->
+        <tickerType>Normal</tickerType>  
+        
         <comps>
           <li>
             <compClass>CompQuality</compClass>
           </li>
+
+         
           <li Class="CompProperties_Art">
             <nameMaker>NamerArtWeaponMelee</nameMaker>
             <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
             <minQualityForArtistic>Excellent</minQualityForArtistic>
           </li>
+          <!-- <li Class="DarktideWeapons.CompProperties_DWToughnessShield">
+            <toughnessDamageReductionMultiplier>1.0</toughnessDamageReductionMultiplier>
+            <toughnessRechargeMultiplier>1.0</toughnessRechargeMultiplier>
+            <maxToughnessBase>120</maxToughnessBase>
+            <startTickstoResetBase>1200</startTickstoResetBase>
+            <killRechargeToughnessBase>60</killRechargeToughnessBase>
+          </li> -->
         </comps>
       </ThingDef>
 
-
     <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
-        <defName>Darktide_Meleeweapon_Catachan_Combat_Blade</defName>
+        <defName>DW_Catachan_CombatBlade</defName>
         <label>Catachan Combat Blade</label>
         <techLevel>Medieval</techLevel>
         <description>Catachan combat blade from Warhammer 40K: Darktide.</description>
         <graphicData>
-          <texPath>Things/Item/Equipment/WeaponMelee/Knife</texPath>
+          <texPath>Things/Weapon/Melee/CatachanBlade</texPath>
           <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <uiIconScale>1.6</uiIconScale>
-        
-        <weaponClasses>
-          <!-- <li>Neolithic</li> -->
-        </weaponClasses>
+        <uiIconScale>1.2</uiIconScale>
         <costStuffCount>30</costStuffCount>
         <statBases>
           <WorkToMake>18000</WorkToMake>
           <Mass>0.5</Mass>
         </statBases>
         <equippedAngleOffset>-65</equippedAngleOffset>
-        <stuffCategories>
-           
-        </stuffCategories>
         <burnableByRecipe>false</burnableByRecipe>
         <tools>
           <li>
@@ -75,7 +90,7 @@
               <li>Cut</li>
             </capacities>
             <power>8</power>
-            <cooldownTime>0.5</cooldownTime>
+            <cooldownTime>0.6</cooldownTime>
             <armorPenetration>0.12</armorPenetration>
           </li>
           <li>
@@ -85,23 +100,321 @@
             </capacities>
             <power>40</power>
             <cooldownTime>2.2</cooldownTime>
-            <armorPenetration>0.6</armorPenetration>
-            <chanceFactor>0.2</chanceFactor>
+            <armorPenetration>0.5</armorPenetration>
+            <chanceFactor>0.3</chanceFactor>
           </li>
         </tools>
         <equippedStatOffsets>
-          <MoveSpeed>0.4</MoveSpeed>
+          <MoveSpeed>0.5</MoveSpeed>
+          <MeleeDodgeChance>10</MeleeDodgeChance>
         </equippedStatOffsets>
         <costList>
             <Steel>30</Steel>
             <Plasteel>80</Plasteel>
             <ComponentIndustrial>5</ComponentIndustrial>
         </costList>
+      </ThingDef>
+
+      <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
+        <defName>DM_Catachan_Sword</defName>
+        <label>Catachan Sword</label>
+        <techLevel>Medieval</techLevel>
+        <description>Catachan Sword from Warhammer 40K: Darktide.</description>
+        <graphicData>
+          <texPath>Things/Weapon/Melee/CatachanSword</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <costStuffCount>30</costStuffCount>
+        <statBases>
+          <WorkToMake>18000</WorkToMake>
+          <Mass>1.5</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tools>
+          <li>
+            <label>Light attack</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>18</power>
+            <cooldownTime>1.3</cooldownTime>
+            <armorPenetration>0.18</armorPenetration>
+          </li>
+          <li>
+            <label>Heavy attack</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>25</power>
+            <cooldownTime>1.8</cooldownTime>
+            <armorPenetration>0.30</armorPenetration>
+            <chanceFactor>0.4</chanceFactor>
+          </li>
+        </tools>
+        <equippedStatOffsets>
+          <!-- <MoveSpeed>0.4</MoveSpeed> -->
+        </equippedStatOffsets>
+        <costList>
+            <Steel>80</Steel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
         <recipeMaker>
             <skillRequirements>
-              <Crafting>9</Crafting>
+              <Crafting>8</Crafting>
             </skillRequirements>
             <displayPriority>400</displayPriority>
           </recipeMaker>
       </ThingDef>
+
+      <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
+        <defName>DW_Rashad_CombatAxe</defName>
+        <label>Rashad Mk II Combat Axe</label>
+        <techLevel>Medieval</techLevel>
+        <description>Rashad Mk II Combat Axe from Warhammer 40K: Darktide. High damage</description>
+        <graphicData>
+          <texPath>Things/Weapon/Melee/RashadAxe</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.6</uiIconScale>
+        <costStuffCount>30</costStuffCount>
+        <statBases>
+          <WorkToMake>18000</WorkToMake>
+          <Mass>1.5</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tools>
+          <li>
+            <label>Light attack</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>25</power>
+            <cooldownTime>1.5</cooldownTime>
+            <armorPenetration>0.22</armorPenetration>
+          </li>
+          <li>
+            <label>Heavy attack</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>30</power>
+            <cooldownTime>1.4</cooldownTime>
+            <armorPenetration>0.48</armorPenetration>
+            <chanceFactor>0.4</chanceFactor>
+          </li>
+        </tools>
+        <equippedStatOffsets>
+          <MoveSpeed>0.2</MoveSpeed>
+          <MeleeHitChance>10</MeleeHitChance>
+          <!-- <MeleeHitChance></MeleeHitChance> -->
+        </equippedStatOffsets>
+        <costList>
+            <Steel>60</Steel>
+            <Plasteel>100</Plasteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+      </ThingDef>
+
+      <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
+        <defName>DW_Sapper_Shovel</defName>
+        <label>Munitorum Sapper Shovel</label>
+        <techLevel>Spacer</techLevel>
+        <description>Munitorum Sapper Shovel from Warhammer 40K: Darktide.</description>
+        <graphicData>
+          <texPath>Things/Weapon/Melee/Shovel</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.0</uiIconScale>
+        <costStuffCount>30</costStuffCount>
+        <statBases>
+          <WorkToMake>18000</WorkToMake>
+          <Mass>1.8</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tools>
+          <li>
+            <label>Light attack</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>18</power>
+            <cooldownTime>1.3</cooldownTime>
+            <armorPenetration>0.20</armorPenetration>
+            <chanceFactor>0.5</chanceFactor>
+          </li>
+          <li>
+            <label>Smash</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>1.9</cooldownTime>
+            <armorPenetration>0.25</armorPenetration>
+            <chanceFactor>0.8</chanceFactor>
+          </li>
+          <li>
+            <label>Fold shovel</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>56</power>
+            <cooldownTime>3.5</cooldownTime>
+            <armorPenetration>0.88</armorPenetration>
+            <chanceFactor>0.4</chanceFactor>
+          </li>
+        </tools>
+        <equippedStatOffsets>
+          <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
+        </equippedStatOffsets>
+        <costList>
+            <Steel>80</Steel>
+            <Plasteel>120</Plasteel>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+      </ThingDef>
+
+      <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
+        <defName>DW_Thunder_Hammer</defName>
+        <label>Thunder Hammer</label>
+        <techLevel>Spacer</techLevel>
+        <description>Thunder Hammer from Warhammer 40K: Darktide.</description>
+        <graphicData>
+          <texPath>Things/Weapon/Melee/Thunderhammer</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.1</uiIconScale>
+        <costStuffCount>30</costStuffCount>
+        <statBases>
+          <WorkToMake>38000</WorkToMake>
+          <Mass>5.0</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tools>
+          <li>
+            <label>Light attack</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>20</power>
+            <cooldownTime>1.5</cooldownTime>
+            <armorPenetration>0.25</armorPenetration>
+          </li>
+          <li>
+            <label>Heavy attack</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>30</power>
+            <cooldownTime>2.4</cooldownTime>
+            <armorPenetration>0.50</armorPenetration>
+          </li>
+          <li>
+            <label>Charged Strike</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>120</power>
+            <cooldownTime>5.5</cooldownTime>
+            <armorPenetration>0.80</armorPenetration>
+          </li>
+        </tools>
+        <costList>
+            <Steel>20</Steel>
+            <Plasteel>150</Plasteel>
+            <Uranium>60</Uranium>
+            <ComponentIndustrial>8</ComponentIndustrial>
+            <ComponentSpacer>8</ComponentSpacer>
+        </costList>
+        <recipeMaker>
+          <researchPrerequisite>ChargedShot</researchPrerequisite>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+            <skillRequirements>
+              <Crafting>11</Crafting>
+            </skillRequirements>
+            <displayPriority>400</displayPriority>
+          </recipeMaker>
+      </ThingDef>
+
+      <ThingDef ParentName="Darktide_MeleeWeapon_Quality">
+        <defName>DW_PowerSword</defName>
+        <label>Power Sword</label>
+        <techLevel>Spacer</techLevel>
+        <description>Power Sword from Warhammer 40K: Darktide.</description>
+        <graphicData>
+          <texPath>Things/Weapon/Melee/PowerSword</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.2</uiIconScale>
+        <costStuffCount>30</costStuffCount>
+        <statBases>
+          <WorkToMake>78000</WorkToMake>
+          <Mass>2.0</Mass>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <burnableByRecipe>false</burnableByRecipe>
+        <tools>
+          <li>
+            <label>Powered Slash</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>35</power>
+            <cooldownTime>1.0</cooldownTime>
+            <armorPenetration>0.60</armorPenetration>
+          </li>
+          <li>
+            <label>Powered Stab</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>55</power>
+            <cooldownTime>1.8</cooldownTime>
+            <armorPenetration>1.30</armorPenetration> 
+          </li>
+        </tools>
+        <equippedStatOffsets>
+          <MeleeHitChance>10</MeleeHitChance>
+        </equippedStatOffsets>
+        <costList>
+            <Steel>30</Steel>
+            <Plasteel>200</Plasteel>
+            <Uranium>120</Uranium>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <ComponentSpacer>20</ComponentSpacer>
+        </costList>
+        <recipeMaker>
+          <researchPrerequisite>ChargedShot</researchPrerequisite>
+          <recipeUsers Inherit="False">
+            <li>FabricationBench</li>
+          </recipeUsers>
+            <skillRequirements>
+              <Crafting>12</Crafting>
+            </skillRequirements>
+            <displayPriority>400</displayPriority>
+          </recipeMaker>
+      </ThingDef>
+
+      <!-- Atrox Tactical Axe -->
+      <!-- Derived from ancient hunting weapon designs, tactical axes are simple and cheap to produce, and deadly in the hands of a trained warrior. -->
+
+      <!-- Indignatus Crusher -->
+      <!-- Power mauls exist in a variety of patterns ranging from one-handed batons to crushing mauls. This model is sized for such that it requires two hands for a standard human to wield it. -->
+
+<!-- Orestes Mk IV Assault Chainaxe -->
+<!-- Orestes chainaxes are brutal in their simplicity. -->
+
+
+<!-- Turtolsky Mk IX Heavy Sword -->
+
+<!-- Tigrus Heavy Eviscerator -->
+
+<!-- Cadia Assault Chainsword -->
+
 </Defs>
