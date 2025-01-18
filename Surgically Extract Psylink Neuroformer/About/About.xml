@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Surgically Extract Psylink Neuroformer</name>
+	<author>Reister_J</author>
+	<packageId>ReisterJ.SEPN</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modVersion>1.00</modVersion>
+	<description>Now you can extract psylink neuroformer from psykers like Imperial Noble Captive.</description>
+	<!-- <modDependencies>
+		
+	</modDependencies> -->
+</ModMetaData>

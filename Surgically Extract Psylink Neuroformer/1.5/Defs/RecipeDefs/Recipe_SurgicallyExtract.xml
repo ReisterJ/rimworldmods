@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef Abstract="True" Name="SurgicallyExtract" ParentName="SurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>18</workSkillLearnFactor>
+    <hideBodyPartNames>true</hideBodyPartNames>
+  </RecipeDef>
+
+  <RecipeDef Abstract="True" Name="Recipes_SurgicallyExtractBase" ParentName="SurgicallyExtract">
+    <workAmount>5000</workAmount>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">CreepJoiner</li>
+    </recipeUsers>
+    <surgerySuccessChanceFactor>0.85</surgerySuccessChanceFactor>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="Recipes_SurgicallyExtractBase">
+    <defName>Recipes_Surgically_Extract_Psylink_Neuroformer</defName>
+    <label>Extract Psylink Neuroformer</label>
+    <description>Extract Psylink Neuroformer from the brain. This process has a probability of brain damage.</description>
+    <workerClass>SurgicallyExtractPsylinkNeuroformer.Recipes_Surgically_Extract_Psylink_Neuroformer</workerClass>
+    <jobString>Performing psylink neuroformer extraction.</jobString>
+    <!-- <researchPrerequisite>ShipCryptosleep</researchPrerequisite> -->
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineUltratech</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentSpacer</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <hideBodyPartNames>true</hideBodyPartNames>
+  </RecipeDef>
+</Defs>
