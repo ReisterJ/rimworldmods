@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef>
+		<defName>NS_Hediff_Stalking</defName>
+		<defaultLabelColor>(0.52, 0.52, 0.35)</defaultLabelColor>
+		<label>Stalking</label>
+		<description>Focus.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+                    <ShootingAccuracyFactor_Long>0.3</ShootingAccuracyFactor_Long>
+					<ShootingAccuracyFactor_Medium>0.4</ShootingAccuracyFactor_Medium>
+                    <ShootingAccuracyFactor_Short>0.5</ShootingAccuracyFactor_Short>
+                    <ShootingAccuracyFactor_Touch>0.6</ShootingAccuracyFactor_Touch>
+                    <MoveSpeed>2.5</MoveSpeed>
+                    <MeleeHitChance>10</MeleeHitChance>
+				</statOffsets>
+				<statFactors>
+                    <MeleeWeapon_CooldownMultiplier>0.9</MeleeWeapon_CooldownMultiplier>
+					<MeleeDamageFactor>2.5</MeleeDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+				<disappearsAfterTicks>960</disappearsAfterTicks> 
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+            <!-- <li ></li> -->
+            <li Class="HediffCompProperties_Invisibility">
+                <visibleToPlayer>true</visibleToPlayer>
+            </li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <ThoughtDef Name="Nudism_Naked_Satisfaction">
+        <defName>Nudism_Naked_Satisfaction_Male</defName>
+        <workerClass>Nudist_Specialists.ThoughtWorker_Precept_Nudism_Naked</workerClass>
+        <gender>Male</gender>
+        <producesMemoryThought>AnyBodyPartCovered_Disapproved_Memory</producesMemoryThought>
+        <stages>
+        <li>
+            <label>Body Naked</label>
+            <description>Now I am free.</description>
+            <baseMoodEffect>10</baseMoodEffect>
+        </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef ParentName="Nudism_Naked_Satisfaction">
+        <defName>Nudism_Naked_Satisfaction_Female</defName>
+        <gender>Female</gender>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>Nudism_Naked_Satisfaction_Memory</defName>
+        <thoughtClass>Thought_Memory</thoughtClass>
+        <durationDays>1</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+        <li>
+            <label>Body Naked</label>
+            <description>Now I am free.</description>
+            <baseMoodEffect>10</baseMoodEffect>
+        </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

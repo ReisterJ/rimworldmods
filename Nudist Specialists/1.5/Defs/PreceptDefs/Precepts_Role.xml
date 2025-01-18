@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <PreceptDef ParentName="PreceptRoleMultiBase">
+    <defName>IdeoRole_SurvivalSpecialist</defName>
+    <label>Survivalist</label>
+    <description>Survivalists focus on living in the wild without so much equipment.</description>
+    <iconPath>UI/Roles/SpecialistMelee</iconPath>
+    <nameMaker>NamerRoleBrawler</nameMaker>
+    <roleRequirements>
+      <li Class="RoleRequirement_MinSkillAny">
+        <skills>
+          <Melee>4</Melee>
+          <Plants>4</Plants>
+        </skills>
+      </li>
+      <li Class="Nudist_Specialists.RoleRequirement_NudeSurvivalist"></li>
+    </roleRequirements>
+    <roleRequiredWorkTags><li>Violent</li></roleRequiredWorkTags>
+    <roleTags><li>Survivalist</li></roleTags>
+    <requiredMemes>
+      <li>Nudism</li>
+    </requiredMemes>
+    <roleEffects>
+      <li Class="Nudist_Specialists.RoleEffect_NoClothing" />
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>MeleeDodgeChance</statDef>
+        <modifier>10</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>InjuryHealingFactor</statDef>
+        <modifier>2</modifier>
+      </li>
+      <!-- for stone gland upgrade-->
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>ArmorRating_Sharp</statDef>
+        <modifier>0.25</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>ArmorRating_Blunt</statDef>
+        <modifier>0.2</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>ComfyTemperatureMin</statDef>
+        <modifier>-10</modifier>
+      </li>
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>ComfyTemperatureMax</statDef>
+        <modifier>10</modifier>
+      </li>
+      <!-- perfect body (no ,its just for fun) -->
+      <li Class="RoleEffect_PawnStatOffset">
+        <statDef>Beauty</statDef>
+        <modifier>1</modifier>
+      </li>
+
+    </roleEffects>
+    <displayOrderInImpact>3</displayOrderInImpact>
+    <grantedAbilities>
+      <li>Survivalist_Ability_Stalk</li>
+    </grantedAbilities>
+    <roleDisabledWorkTags>
+    </roleDisabledWorkTags>
+    
+  </PreceptDef>
+</Defs>

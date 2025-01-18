@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="Nudity_Male_Mandatory"]/comps</xpath>
+        <value>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>Nudism_Naked_Satisfaction_Male</thought>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="Nudity_Female_Mandatory"]/comps</xpath>
+        <value>
+            <li Class="PreceptComp_SituationalThought">
+                <thought>Nudism_Naked_Satisfaction_Female</thought>
+            </li>
+        </value>
+    </Operation>
+</Patch>
